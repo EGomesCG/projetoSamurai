@@ -23,17 +23,22 @@ export const Selector = styled.button`
   border: none;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  transition {
-    background: 0.3s;
-    transform: translateX(5px) scale(1.02);
-  }
   padding: 0 1rem;
-  &:hover,
-  &.selected {
+  transition: 0.3ms;
+  &:hover {
     background: ${(props) => props.color || props.theme.colors.light};
     color: ${(props) =>
       props.color ? props.theme.colors.white : props.theme.colors.black};
   }
+  /* &.user-selected {
+    background: ${(props) => props.color || props.theme.colors.light};
+    color: ${(props) =>
+    props.color ? props.theme.colors.white : props.theme.colors.black};
+  } */
+  /* transition {
+    background: 0.3s;
+    transform: translateX(5px) scale(1.02);
+  } */
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     border-radius: 20px;
     &:hover,
